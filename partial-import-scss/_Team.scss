@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  // background: #f5f5f5;
+}
+
+@mixin display($display, $content, $alignment) {
+  display: $display;
+  justify-content: $content;
+  align-items: $alignment;
+}
+.our-team {
+  background: #fff;
+  // margin: 10px 0px;
+  @include display(flex, center, center);
+  padding: 30px 0px;
+
+  .our-team-wrapper {
+    width: 100%;
+    // background: red;
+    height: auto;
+    .content {
+      @include display(flex, center, center);
+      // height: 20vh;
+      margin-bottom: 25px;
+      .sub-content {
+        h1 {
+          font-size: 36px;
+          color: #000000;
+          margin-top: 10px;
+          padding: 0%;
+        }
+        p {
+          margin: 0%;
+          color: #000000;
+        }
+        h1,
+        p {
+          text-align: center;
+        }
+
+        .rectangle {
+          height: 0.5vh;
+          margin: 5px 110px;
+          background: #8d97ad;
+          border: 4px;
+        }
+      }
+    }
+
+    .team {
+      // background: yellow;
+
+      @include display(flex, center, center);
+
+      .team-card-container {
+        height: auto;
+        width: 75%;
+        @include display(flex, space-evenly, center);
+        flex-wrap: wrap;
+        // background: blueviolet;
+        .team-card {
+          min-height: 300px;
+          width: 300px;
+          margin: 20px 0px;
+          // background: #fff;
+          .in-person {
+            // background: orange;
+            @include display(flex, center, center);
+            .img {
+              filter: grayscale(1);
+              width: 200px;
+              border-radius: 200px;
+              overflow: hidden;
+              height: 200px;
+              box-shadow: 2px -1px 2px #0000001a;
+              img {
+                width: 120%;
+              }
+              &:hover {
+                filter: grayscale(0);
+              }
+            }
+            // background: orange;
+          }
+
+          .person-name {
+            margin-top: 25px;
+            h5 {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 22px;
+              text-align: center;
+
+              color: #3e4555;
+            }
+          }
+
+          .person-occupation {
+            h6 {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 24px;
+              text-align: center;
+              color: #8d97ad;
+            }
+          }
+
+          .icons {
+            text-align: center;
+            i {
+              transition-duration: 0.2s;
+              margin: 0 5px;
+              line-height: 28px;
+              font-size: 18px;
+
+              &:hover {
+                transform: translateY(-1px);
+                border-radius: 0;
+                transition-property: transform border-radius;
+                transition-timing-function: ease-out;
+                transition-duration: 0.2s;
+              }
+            }
+          }
+          h2 {
+            text-align: center;
+
+            margin: 20px 0px 8px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen  and (max-width: 425px) {
+  .team {
+    .team-card-container {
+      display: block !important;
+      margin: 0 auto;
+      width: auto !important;
+      .team-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px !important;
+        .team-individuals-details{
+          zoom: 130% !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .team-card-container {
+    width: 90% !important;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+  .our-team {
+    zoom: 122%;
+  }
+}
+@media only screen and (min-width: 1920px) and (max-width: 2520px) {
+  .our-team {
+    zoom: 140%;
+    padding: 0px 40px;
+  }
+}

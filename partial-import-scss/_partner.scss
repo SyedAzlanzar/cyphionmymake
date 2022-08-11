@@ -1,0 +1,60 @@
+.partners-section{
+    background: #F9F3F2;
+    padding: 40px 0 80px 0;
+    h1{
+        text-align: center;
+        padding: 20px;
+        color: #002947;
+        font-size: 30px;
+    }
+    .partners{
+        h4{
+            line-height: 1.5;
+        }
+        margin-top: 20px;
+        // background: orange;
+        @include view(flex,center,center);
+    
+        .p-container{
+            width: 1024px;
+            @include view(flex,center,center);
+            flex-wrap: wrap;
+    
+            .p1,.p2,.p3,.p3 , .p4{
+                width: 250px;
+                .text{
+                    text-align: center;
+                    padding: 15px;
+                }
+              
+            }
+    
+            .p1-img{
+                // background: red;
+                background: url(../images/partners/Google-Developer-Certified-Agency.png) no-repeat center/contain;
+                height: 150px;
+                width: auto;
+            }
+            .p2-img{
+                background: url(../images/partners/Adobe-Solution-Partner-Program.png) no-repeat center/contain;
+                height: 150px;
+                width: auto;
+    
+            }
+            .p3-img{
+                background: url(../images/partners/Microsoft-Certified-Consulting-Partner.png) no-repeat center/contain;
+                height: 150px;
+                width: auto;
+    
+            }
+            .p4-img{
+                background: url(../images/partners/Amazon-Web-Services-Partner.png) no-repeat center/contain;
+                height: 150px;
+                width: auto;
+    
+            }
+    
+        }
+    }
+}
+

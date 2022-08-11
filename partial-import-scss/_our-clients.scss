@@ -1,0 +1,86 @@
+@mixin view($display, $justifycontent, $alignitems) {
+  display: $display;
+  justify-content: $justifycontent;
+  align-items: $alignitems;
+}
+.main-client-container{
+  @include view(flex, center, center);
+  // min-height: 70vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+.our-clients {
+  height: auto;
+  // background: peru;
+  zoom: 100%;
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0px;
+    font-weight: 1000;
+}
+  .clients-container {
+    min-height: auto;
+    width: 100%;
+
+    .clients {
+      @include view(flex, center, center);
+      flex-wrap: wrap;
+      div{
+        height: 105px;
+        // background: #8f2828;
+        border-radius: 22px;
+
+        width: auto;
+      @include view(flex, center, center);
+    //   background: blue;
+        margin:20px 50px ;
+        transition: 0.5s;
+        img{
+            height: 105px;
+            width: auto;
+        }
+      }
+      div:hover{
+        transform: translateY(-5px);
+        transition-property: transform;
+        transition-timing-function: ease-out;
+        transition-duration: 0.5s;
+        cursor:pointer;
+        box-shadow: 0px 3px 10px #47474726;
+      }
+
+    }
+  }
+}
+}
+.reveal{
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: all 10s ease-out;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media only screen and (min-width:1440px) and (max-width: 1919px) {
+    
+  .clients{
+    zoom: 117%;
+
+    
+  }
+}
+
+@media only screen and (min-width:1920px) and (max-width: 2520px) {
+    
+  .clients{
+    zoom: 130%;
+    padding: 0px 40px;
+
+    
+  }
+}
+
